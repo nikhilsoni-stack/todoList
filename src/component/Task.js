@@ -1,9 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import Style from './Task.module.css';
-
+import TaskList from './TaskList';
 const Task = () => {
   const [isTaskOpen, setIsTaskOpen] = useState(true);
   const [taskList,setTaskList] = useState([]);
+  const tasks=[{
+    url:'Nikhil',
+    task:"change the cloths",
+    done: true,
+    time: '12:20pm',
+
+},{
+    url:'Nikhil',
+    task:"change the cloths",
+    done: true,
+    time: '12:20pm',
+
+},{
+    url:'Nikhil',
+    task:"change the cloths",
+    done: true,
+    time: '12:20pm',
+
+},{
+    url:'Nikhil',
+    task:"change the cloths",
+    done: true,
+    time: '12:20pm',
+
+},]
 
   
   const openAddTask = () => {
@@ -24,7 +49,7 @@ const Task = () => {
       </div>
       <div className={Style.container}>
           {isTaskOpen ?  
-        'nikhil'
+        <TaskList tasks={tasks}/>
           :"name is sing"
         }
           

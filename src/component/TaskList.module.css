@@ -1,0 +1,16 @@
+.container {
+    margin-top: 0;
+    overflow-y: hidden;
+    min-height: 472px;
+    max-height: 472px;
+    margin: auto;
+  }
+  
+  
+  
+  .flexContainer {
+    display: flex;
+    margin-left: 16px;
+    flex-direction: column-reverse;
+  }
+  
