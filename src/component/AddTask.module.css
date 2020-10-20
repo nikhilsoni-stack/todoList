@@ -1,0 +1,76 @@
+  .addTask {
+    cursor: pointer;
+    display: inline-flex;
+    color: white;
+    font-size: 5in;
+    margin-right: 4%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .formField {
+    font-size: 2vh;
+    color: rgb(121, 117, 117);
+    margin-bottom: 20px;
+    
+  }
+  
+  .formContainer {
+    width: 80vw;
+    margin: 10vh auto 0px;
+    margin-left: 20%;
+  }
+  
+  .inputText {
+    font-size: 2vh;
+    margin-bottom: 50px;
+    outline: 0;
+    width: 70%;
+    border-width: 0 0 2px;
+    border-color: rgb(202, 202, 202);
+  }
+  .inputText:focus {
+    transition: text-indent 0.4s 0.4s ease;
+    border-color: #6200ed;
+  }
+  
+  .addButton {
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    justify-content: space-around;
+    text-decoration: none;
+    background-color: #6200ed;
+    color: white;
+    font-size: 2vh;
+  }
+  
+  .buttonContainer {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .text {
+    overflow-wrap: break-word;
+  }
+  
+  @media screen and (max-width: 780px) {
+    .formContainer {
+      width: 90vw;
+    }
+    .taskContainer {
+      width: 80%;
+    }
+  }
+  

@@ -1,0 +1,73 @@
+.taskList {
+    display: inline-block;
+    width: 94%;
+    padding-right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    
+  }
+  
+  .taskListPara {
+    padding-left: 3px;
+    float: left;
+    letter-spacing: -0.07px;
+    color: #00112C;
+    padding-top: 3px;
+    line-height: 18px;
+    letter-spacing: 0.0125em;
+    margin-bottom: 0;
+    /* word-wrap: break-word; */
+    text-align: left;
+    flex-grow: 3;
+  }
+  
+  .taskSubheading {
+    display: flex;
+    justify-content: s;
+  }
+  
+  .taskSubheading {
+    text-transform: capitalize;
+  
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    letter-spacing: -0.08px;
+    color: #00112c;
+  }
+  .userImage{
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  
+  .taskListSpan {
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 0.0125em;
+    text-align: left;
+    letter-spacing: -0.06px;
+    opacity: 1;
+    color: gray;
+  }
+  .checkBoxContainer {
+    width: auto;
+  }
+  .checkBox {
+    width: 30px;
+    height: 30px;
+  }
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+ 

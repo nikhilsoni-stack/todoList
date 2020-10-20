@@ -3,6 +3,8 @@
     box-shadow: 0px 3px 6px #00000029;
     display: flex;
     padding-bottom: 10px;
+    overflow: auto;
+
   }
   
  
@@ -10,6 +12,7 @@
   .header {
     padding: 10px 16px;
     background: blue 0% 0% no-repeat padding-box;
+    min-height: 40px;
     text-align: left;
     letter-spacing: -0.11px;
     color: #ffffff;
@@ -22,9 +25,30 @@
     height: 100%;
     position: absolute;
     right: 0;
-    top: 50px;
+    
+  }
+
+  .addTask {
+    cursor: pointer;
+    display: inline-flex;
+    color: white;
+    font-size: 5vh;
+    margin-right: 4%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
   }
   
+  .title {
+    display: inline-flex;
+    color: white;
+    font-size: 4vh;
+    margin-right: 4%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 20px;
+  }
   
   
   
