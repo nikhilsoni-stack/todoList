@@ -13,16 +13,16 @@ return (
       <div className={styles.taskListPara}>
         <div>{task}</div>
         </div>
-      { done ?
+      {done?
       <span className={styles.taskListSpan}>{time}</span>
       :
       <div className={styles.checkBoxContainer}>
-            <input
-              type="checkbox"
-              className={styles.checkBox}
-              onChange={() => isDone(taskId)}
-            />
-          </div>
+        <input
+          type="checkbox"
+          className={styles.checkBox}
+          onChange={() => isDone(taskId)}
+        />
+      </div>
       }
     </div>
   </div>

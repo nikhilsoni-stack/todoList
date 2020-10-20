@@ -2,23 +2,33 @@ import React, { useState, useEffect } from 'react';
 import Style from './Task.module.css';
 import TaskList from './TaskList';
 import AddTask from './AddTask';
+import {createTask,getTasks,updateTask } from '../api/Api'
 const Task = () => {
   const [isTaskOpen, setIsTaskOpen] = useState(true);
   const [taskList,setTaskList] = useState([]);
   const openAddTask = () => {
     setIsTaskOpen(false); 
   };
-  const addTask = (task) =>{
+  useEffect(()=>{
+    async function getData() {
+      // const data = await getTasks();
+      setTaskList([]) // data;
+    }
+    getData();
+  },[]);
+  const addTask = async (task) =>{
     const temp=Object.assign([],taskList);
     temp[temp.length]=task;
-    setTaskList(temp);
+    // const data = await createTask(task);
+    setTaskList(temp); // user data here
     setIsTaskOpen(true);
   }
   const isDone =(index) => {
     const temp=Object.assign([],taskList);
     temp[index].time=`${new Date().getHours()} : ${new Date().getMinutes()} `;
     temp[index].done=true;
-    setTaskList(temp);
+    // const data = await updateTask(index);
+    setTaskList(temp);  //set data here
 
   }
   

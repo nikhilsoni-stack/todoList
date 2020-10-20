@@ -15,8 +15,6 @@ const TaskList = ({ tasks,isDone}) => {
           isDone={isDone}
           />
         ))}
-        {/* {tasks.length===0 ?
-        <div>Task List is Empty</div>:''} */}
       </div>
     </div>
     
