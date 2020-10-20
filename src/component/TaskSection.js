@@ -8,13 +8,13 @@ return (
   <div className={styles.taskList}>
     <div className={styles.taskSubheading}>
       <div className={styles.taskSubheading}>
-      <img src={avtar} className={styles.userImage}/>
+      <img src={url || avtar} className={styles.userImage}/>
       </div>
       <div className={styles.taskListPara}>
         <div>{task}</div>
         </div>
       {done?
-      <span className={styles.taskListSpan}>{time}</span>
+      <span className={styles.taskListSpan}>{new Date(time).getHours()+":"+new Date(time).getMinutes()}</span>
       :
       <div className={styles.checkBoxContainer}>
         <input

@@ -5,19 +5,16 @@ const AddTask = ({ addTask }) => {
   let imagePath = React.createRef();
 
   const addToList = () => {
-      if(task.current.value!=='' && imagePath.current.value!=='')
+      if(task.current.value!=='')
       {
     const taskData = {};
-    taskData.task = task.current.value;
-    taskData.url = imagePath.current.value;
-    taskData.time=`${new Date().getHours()} : ${new Date().getMinutes()} `;
-    taskData.done = false
-    taskData.id='';
+    taskData.description = task.current.value;
+    taskData.avatar_url = imagePath.current.value;
     addTask(taskData);
       }
       else 
       {
-          alert("All fields are required");
+          alert("Task field is required");
       }
   }
   return (

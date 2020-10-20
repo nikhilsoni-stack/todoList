@@ -7,11 +7,11 @@ const TaskList = ({ tasks,isDone}) => {
       <div className={styles.flexContainer}>
         {tasks.map((task,index) => (
           <TaskSection
-          done= {task.done}
-          task={task.task}
-          url ={task.url}
-          time={task.time}
-          taskId={index}
+          task={task.description}
+          url ={task.avatar_url}
+          time={task.completed_at}
+          taskId={task.id}
+          done = {task.completed_at!==null}
           isDone={isDone}
           />
         ))}

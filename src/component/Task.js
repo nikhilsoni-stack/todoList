@@ -11,24 +11,21 @@ const Task = () => {
   };
   useEffect(()=>{
     async function getData() {
-      // const data = await getTasks();
-      setTaskList([]) // data;
+      const data= await getTasks();
+      console.log(data);
+      setTaskList(data);
     }
     getData();
   },[]);
   const addTask = async (task) =>{
-    const temp=Object.assign([],taskList);
-    temp[temp.length]=task;
-    // const data = await createTask(task);
-    setTaskList(temp); // user data here
     setIsTaskOpen(true);
+    const data = await createTask(task);
+    setTaskList(data);
+    
   }
-  const isDone =(index) => {
-    const temp=Object.assign([],taskList);
-    temp[index].time=`${new Date().getHours()} : ${new Date().getMinutes()} `;
-    temp[index].done=true;
-    // const data = await updateTask(index);
-    setTaskList(temp);  //set data here
+  const isDone = async(index) => {
+    const data = await updateTask(index);
+    setTaskList(data);  
 
   }
   
