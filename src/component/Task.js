@@ -9,22 +9,16 @@ const Task = () => {
   const openAddTask = () => {
     setIsTaskOpen(false); 
   };
-  useEffect(()=>{
-    async function getData() {
-      const data= await getTasks();
-      console.log(data);
-      setTaskList(data);
-    }
-    getData();
-  },[]);
   const addTask = async (task) =>{
     setIsTaskOpen(true);
-    const data = await createTask(task);
+    const data = Object.assign([],taskList);
+    data.push(task);
     setTaskList(data);
     
   }
   const isDone = async(index) => {
-    const data = await updateTask(index);
+    const data = Object.assign([],taskList);
+    data[index].completed_at=new Date();
     setTaskList(data);  
 
   }

@@ -10,6 +10,7 @@ const AddTask = ({ addTask }) => {
     const taskData = {};
     taskData.description = task.current.value;
     taskData.avatar_url = imagePath.current.value;
+    taskData.completed_at=null;
     addTask(taskData);
       }
       else 

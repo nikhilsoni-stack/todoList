@@ -10,7 +10,7 @@ const TaskList = ({ tasks,isDone}) => {
           task={task.description}
           url ={task.avatar_url}
           time={task.completed_at}
-          taskId={task.id}
+          taskId={index}
           done = {task.completed_at!==null}
           isDone={isDone}
           />
