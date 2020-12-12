@@ -29,21 +29,21 @@ export const updateTask = async (task) => {
 
 export const createTask = async (task) => {
   const result = await axios.post(
-    "https://git.heroku.com/mmy-to-do-list.git/api/tasks",
+    "https://mmy-to-do-list.herokuapp.com/api/tasks/api/tasks",
     task
   );
   const data = await axios.get(
-    "https://git.heroku.com/mmy-to-do-list.git/api/tasks"
+    "https://mmy-to-do-list.herokuapp.com/api/tasks/api/tasks"
   );
   return data.data;
 };
 
 export const deletetask = async (taskId) => {
   const result = await axios.delete(
-    "https://git.heroku.com/mmy-to-do-list.git/api/tasks/" + taskId
+    "https://mmy-to-do-list.herokuapp.com/api/tasks/api/tasks/" + taskId
   );
   const data = await axios.get(
-    "https://git.heroku.com/mmy-to-do-list.git/api/tasks"
+    "https://mmy-to-do-list.herokuapp.com/api/tasks/api/tasks"
   );
   return data.data;
 };
