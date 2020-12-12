@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./AddTask.module.css";
-const AddTask = ({ addTask }) => {
+const UpdateTask = ({ updateTask, data, setOpen }) => {
   let task = React.createRef();
 
   const addToList = () => {
     if (task.current.value !== "") {
       const taskData = {};
       taskData.description = task.current.value;
-      addTask(taskData);
+      taskData.id = data.id;
+      taskData.isCompleted = false;
+      setOpen(true);
+      updateTask(taskData);
     } else {
       alert("Task field is required");
     }
@@ -19,11 +22,11 @@ const AddTask = ({ addTask }) => {
         <input type="text" className={styles.inputText} ref={task}></input>
         <div className={styles.buttonContainer}>
           <button className={styles.addButton} onClick={() => addToList()}>
-            Add
+            Update
           </button>
         </div>
       </div>
     </div>
   );
 };
-export default AddTask;
+export default UpdateTask;
