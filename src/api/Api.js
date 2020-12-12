@@ -1,29 +1,49 @@
 import axios from "axios";
 
 export const getTasks = async () => {
-  const data = await axios.get("http://localhost:3000/api/tasks");
+  let config = {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,OPTIONS",
+      "Access-Control-Allow-Headers":
+        "Content-Type, Authorization, Content-Length, X-Requested-With",
+    },
+  };
+  const data = await axios.get(
+    "https://git.heroku.com/mmy-to-do-list.git/api/tasks",
+    config
+  );
   return data.data;
 };
 export const updateTask = async (task) => {
   const result = await axios.patch(
-    "http://localhost:3000/api/tasks/" + task.id,
+    "https://git.heroku.com/mmy-to-do-list.git/api/tasks/" + task.id,
     task
   );
-  const data = await axios.get("http://localhost:3000/api/tasks");
+  const data = await axios.get(
+    "https://git.heroku.com/mmy-to-do-list.git/api/tasks"
+  );
 
   return data.data;
 };
 
 export const createTask = async (task) => {
-  const result = await axios.post("http://localhost:3000/api/tasks", task);
-  const data = await axios.get("http://localhost:3000/api/tasks");
+  const result = await axios.post(
+    "https://git.heroku.com/mmy-to-do-list.git/api/tasks",
+    task
+  );
+  const data = await axios.get(
+    "https://git.heroku.com/mmy-to-do-list.git/api/tasks"
+  );
   return data.data;
 };
 
 export const deletetask = async (taskId) => {
   const result = await axios.delete(
-    "http://localhost:3000/api/tasks/" + taskId
+    "https://git.heroku.com/mmy-to-do-list.git/api/tasks/" + taskId
   );
-  const data = await axios.get("http://localhost:3000/api/tasks");
+  const data = await axios.get(
+    "https://git.heroku.com/mmy-to-do-list.git/api/tasks"
+  );
   return data.data;
 };
