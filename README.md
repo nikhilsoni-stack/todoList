@@ -14,4 +14,4 @@ You will also see any lint errors in the console.
 
 ### Deployed Link at github
 
-Open [https://nikhilsoni-stack.github.io/todoList] (https://nikhilsoni-stack.github.io/todoList) to view in the browser
+Open [https://nikhilsoni-stack.github.io/todoList](https://nikhilsoni-stack.github.io/todoList) to view in the browser
